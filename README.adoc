@@ -29,3 +29,39 @@ Feature: Is it Friday yet?
 image::TP 1 - Test Successfull.png[width=80%]
 
 == TP2...
+
+.Code de la page de order.java
+
+```
+package dojo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Order {
+    String owner;
+List<String> cocktails =new ArrayList<>();
+    String target;
+
+    public void declareOwner(String owner) {
+        this.owner = owner;
+
+    }
+
+    public void declareTarget(String target) {
+        
+        this.target = target;
+    
+    }
+
+    public List<String> getCocktails() {
+        
+        return cocktails;
+    
+    }
+}
+```
+
+.Caprute d’écran de l’exécution avec succès des tests
+
+image::capture2.png[width=80%]
