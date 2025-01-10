@@ -28,7 +28,7 @@ Feature: Is it Friday yet?
 
 image::TP 1 - Test Successfull.png[width=80%]
 
-== TP2...
+== TP2
 
 .Code de la page de order.java
 
