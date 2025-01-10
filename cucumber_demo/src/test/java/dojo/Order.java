@@ -17,7 +17,7 @@ List<String> cocktails =new ArrayList<>();
         
         this.target = target;
      
-    }
+}
 
     public List<String> getCocktails() {
         
