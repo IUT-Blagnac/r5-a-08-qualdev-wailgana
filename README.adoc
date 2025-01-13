@@ -173,3 +173,89 @@ L’objectif était de tester une application simple, créée lors de la premiè
 .Caprute d’écran de l’exécution avec succès des tests
 
 image::TP3.PNG[width=80%]
+
+
+== TP4
+
+Ayant eu des problèmes sur la machine de l'iut j'ai réalisé ce TP en binôme avec kilian boivert
+
+==== Test du TP-1
+
+```
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running hellocucumber.RunCucumberTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.427 s -- in hellocucumber.RunCucumberTest
+[INFO] 
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.047 s
+[INFO] Finished at: 2025-01-13T09:09:21+01:00
+[INFO] ------------------------------------------------------------------------
+```
+
+==== Test du TP-2
+
+
+```
+2 Scenarios (2 passed)
+6 Steps (6 passed)
+0m0,017s
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.305 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.391 s
+[INFO] Finished at: 2025-01-13T09:10:58+01:00
+[INFO] ------------------------------------------------------------------------
+```
+
+==== Test du TP-3
+
+```
+  Scenario Outline: RÚinitialiser le compteur -- @1.1   # features/compteur.feature:36
+    Given l'application est lancÚe                      # features/steps/compteur_steps.py:5
+    When je clique sur "Augmenter"                      # features/steps/compteur_steps.py:10
+    And je clique sur "RÚinitialiser"                   # features/steps/compteur_steps.py:10
+    Then le compteur doit afficher "Compteur : 0"       # features/steps/compteur_steps.py:32
+
+  Scenario Outline: RÚinitialiser le compteur -- @1.2   # features/compteur.feature:37
+    Given l'application est lancÚe                      # features/steps/compteur_steps.py:5
+    When je clique sur "RÚduire"                        # features/steps/compteur_steps.py:10
+    And je clique sur "RÚinitialiser"                   # features/steps/compteur_steps.py:10
+    Then le compteur doit afficher "Compteur : 0"       # features/steps/compteur_steps.py:32
+
+1 feature passed, 0 failed, 0 skipped
+6 scenarios passed, 0 failed, 0 skipped
+28 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m0.695s
+```
+
+
+==== Documentation améliorée avec cucumber
+Je n’ai pas réussi à la faire fonctionner sur mon PC.
+
+
+==== Documentation améliorée avec Cukedoctor
+===== Projet du TP1
+
+image::tp4_test_cukedoctor_TP1.png[width=80%]
+===== Projet du TP2
+
+image::tp4_test_cukedoctor_TP2.png[width=80%]
+
+===== Projet du TP3
+
+Le fichier que génère behave ne correspond à ce qu’attends Cukedoctor, je n’ai donc pas pu générer la documentation via Cukedoctor.
